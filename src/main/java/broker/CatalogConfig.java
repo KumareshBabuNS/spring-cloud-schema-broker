@@ -9,6 +9,7 @@ import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.cloud.servicebroker.model.Catalog;
@@ -92,6 +93,7 @@ public class CatalogConfig {
     public static class Schema {
 
         @JsonSerialize()
+        @JsonProperty("$schema")
         private final String schema;
 
         @JsonSerialize()
